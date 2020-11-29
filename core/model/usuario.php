@@ -6,7 +6,7 @@ class Usuario
 
     public function __construct()
     {
-        $this->id_usuario = "";
+        $this->idusuario = "";
         $this->nombre = "";
         $this->email = 1;    
         $this->telefono  = "";    
@@ -18,9 +18,9 @@ class Usuario
         return $query;//regresa el id registrado
     }
 
-    public static function getByEmail($email)
+    public function getByEmail()
     {
-        $query = "SELECT * FROM ".self::$table_name." WHERE email IN ('$email');";
+        $query = "SELECT * FROM ".self::$table_name." WHERE email IN ('$this->email');";
         return Model::one($query, new Usuario());//ONE OBTIENE SOLO UN REGISTRO
     }    
 }
