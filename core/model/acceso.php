@@ -23,6 +23,12 @@ class Acceso
         $query = "SELECT * FROM ".self::$table_name." WHERE fk_usuario IN ('$id') AND estatus = 1;";
         return Model::one($query, new Acceso());//ONE OBTIENE SOLO UN REGISTRO
     }    
+
+    public static function cerrarSession($id)
+    {
+        $query = sql("UPDATE ".self::$table_name." SET estatus = 0 WHERE fk_usuario = '$id';");
+        return $query;
+    }
 }
 
 ?>

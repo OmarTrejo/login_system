@@ -18,10 +18,12 @@
         $control_password->fk_usuario = $id_usuario;
         $control_password->password = password_hash(ssql($_POST['password']),PASSWORD_DEFAULT);
         echo "USUARIO REGISTRADO CON ÉXITO \n";
+        header("Location: ../index.php");	
     }
     else
     {
         //NO SE ENCONTRO
         echo "ENCONTRADO";
+        header("Location: ../index.php");	
     }
 ?>

@@ -67,7 +67,7 @@
                                             <input type="email" class="form-control form-control-lg" placeholder="Correo electrónico" aria-label="Username" aria-describedby="basic-addon1" name="email" required="">
                                         </div>
                                         <div class="input-group mb-3">
-                                            <input type="password" class="form-control form-control-lg" placeholder="Contraseña" aria-label="Password" aria-describedby="basic-addon1" name="password" required="">
+                                            <input type="password" class="form-control form-control-lg" placeholder="Contraseña" aria-label="Password" minlength="8" aria-describedby="basic-addon1" maxlength="8" name="password" required="">
                                         </div>
                                     </div>
                                 </div>
@@ -114,7 +114,8 @@
                                                 <input type="email" class="form-control form-control-lg" placeholder="Correo electrónico" aria-label="Username" aria-describedby="basic-addon1" name="email" required="">
                                             </div>
                                             <div class="input-group mb-3">
-                                                <input type="password" class="form-control form-control-lg" placeholder="Contraseña" aria-label="Password" aria-describedby="basic-addon1" name="password" required="">
+                                                <input type="password" class="form-control form-control-lg" placeholder="Contraseña" aria-label="Password" aria-describedby="basic-addon1" name="password" minlength="8"
+                                                maxlength="8" required="">
                                             </div>
                                         </div>
                                     </div>

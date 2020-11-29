@@ -24,6 +24,12 @@ class ControlPassword
         $query = "SELECT * FROM ".self::$table_name." WHERE fk_usuario IN ('$id') and estatus = 1;";
         return Model::one($query, new ControlPassword());//ONE OBTIENE SOLO UN REGISTRO
     }   
+
+    public function update()
+    {
+        $query = sql("UPDATE ".self::$table_name." SET estatus = 0 where fk_usuario = '$this->fk_usuario'");
+        return $query;//regresa el id registrado
+    }
 }
 
 ?>

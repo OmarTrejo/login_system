@@ -10,12 +10,14 @@
     if(is_null($usuario->getByEmail()))
     {
         echo "Usuario o password incorrecto \n";
+        header("Location: ../index.php");	
     }
     else
     {
         $usuario = $usuario->getByEmail();
         //NO SE ENCONTRO
         echo "ENCONTRADO \n";
+        header("Location: ../index.php");	
 
         //SE ENCONTRO
         $acceso = new Acceso();
@@ -30,7 +32,7 @@
             {
                 //SE ENCONTRO LA CONSULTA 
                 echo "EL PASSWORD HA CADUCADO \n";
-
+                header("Location: ../index.php");	
             }
             else
             {
@@ -51,6 +53,7 @@
                 {
                     //ACCESO INCORRECTO
                     echo "PASSWORDO O EMAIL INCORRECTOS \n";
+                    header("Location: ../index.php");	
                 }
             }
 
@@ -59,6 +62,7 @@
         {
             //TODO BIEN, SE ENCONTRO UNA SESION ACTIVA
             echo "SESION ACTIVA \n";
+            header("Location: ../index.php");	
         }
     }
 ?>
